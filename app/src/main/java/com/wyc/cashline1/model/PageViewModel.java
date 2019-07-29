@@ -1,4 +1,4 @@
-package com.wyc.cashline1;
+package com.wyc.cashline1.model;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
