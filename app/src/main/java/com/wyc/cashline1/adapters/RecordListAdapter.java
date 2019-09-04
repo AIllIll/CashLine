@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.wyc.cashline1.Entities.Record;
@@ -47,7 +46,7 @@ public class RecordListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-           convertView = inflater.inflate(R.layout.record_list_item, parent, false);
+           convertView = inflater.inflate(R.layout.list_item_record, parent, false);
            viewHolder = new ViewHolder(convertView);
            convertView.setTag(viewHolder);
         } else {
@@ -64,13 +63,13 @@ public class RecordListAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        @BindView(R.id.record_list_item_image1)
+        @BindView(R.id.list_item_record_image1)
         ImageView image1;
-        @BindView(R.id.record_list_item_image2)
+        @BindView(R.id.list_item_record_image2)
         ImageView image2;
-        @BindView(R.id.record_list_item_date)
+        @BindView(R.id.list_item_record_date)
         TextView date;
-        @BindView(R.id.record_list_item_amount)
+        @BindView(R.id.list_item_record_amount)
         TextView amount;
 
         public ViewHolder(View view) {

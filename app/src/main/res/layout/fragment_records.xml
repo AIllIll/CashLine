@@ -8,44 +8,70 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_records_guideline_top"
+        android:id="@+id/fragment_records_guideline_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08"  />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/fragment_records_tabs"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_records_guideline_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintGuide_end="20dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="#FFFFFF"
         app:backgroundTint="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_records_guideline_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@android:color/black"
         app:srcCompat="@android:drawable/ic_input_add" />
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_show_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_records_guideline_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@android:color/black"
+        app:srcCompat="@android:drawable/ic_input_add" />-->
 
     <ListView
         android:id="@+id/record_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_records_guideline_bottom"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView_account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:text="中国银行"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_records_guideline_top" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_list"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView_account_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:text="0.06"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_list"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

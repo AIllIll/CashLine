@@ -27,10 +27,8 @@ import butterknife.ButterKnife;
 
 public class RecordsFragment extends Fragment {
 
-    @BindView(R.id.fragment_records_tabs)
-    TabLayout tabs;
-    @BindView(R.id.fab)
-    FloatingActionButton fab;
+    @BindView(R.id.fab_add)
+    FloatingActionButton fabAdd;
     @BindView(R.id.record_list)
     ListView recordListView;
 
@@ -39,7 +37,7 @@ public class RecordsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_records, container, false);
         ButterKnife.bind(this, root);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
