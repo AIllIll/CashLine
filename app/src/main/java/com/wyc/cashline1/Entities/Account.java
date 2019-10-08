@@ -4,6 +4,11 @@ public class Account extends Base {
     private float balance;
     private int imageResId;
 
+    public Account(float balance, int imageResId) {
+        this.balance = balance;
+        this.imageResId = imageResId;
+    }
+
     public int getImageResId() {
         return imageResId;
     }

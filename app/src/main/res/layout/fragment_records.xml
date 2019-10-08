@@ -14,6 +14,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="20dp" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_records_guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
@@ -44,11 +51,10 @@
         android:id="@+id/record_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="0dp"
         app:layout_constraintBottom_toBottomOf="@id/fragment_records_guideline_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="@+id/fragment_records_guideline_top">
 
     </ListView>
 
